@@ -1,0 +1,1 @@
+"use strict";var num=100;console.log(num);for(var i=0;i<100;i++)console.log(i);var n1=100;console.log(n1);var _n=200;console.log(_n);

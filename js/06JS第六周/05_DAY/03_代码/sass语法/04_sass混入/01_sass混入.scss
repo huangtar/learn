@@ -1,0 +1,103 @@
+/*
+  sass 混入
+    + 要使用关键字来完成了
+    + 在 scss 里面定义一个函数
+      + 在你需要使用的时候调用就好了
+    + 定义函数的时候
+      + 使用 @mixin 函数名() {}
+    + 调用函数的时候
+      + 使用 @include 函数名
+
+  什么东西定义函数
+    + 一些常用有复杂，有选项比较多的内容
+    + 我们定义成 混合器
+
+  混合器可以在定义的时候定义形参
+    + 在调用的时候传递实参
+    + 形参定义就是直接在 (变量，变量2，变量3， ...)
+    + 在调用的时候 @include 混合器名称(实参1，实参2， 实参3， ...)
+      + 在使用的时候，必须每一个实参都传递
+  混合器的形参何以设置默认值
+    + 形参默认值直接在定义的时候书写
+    + @mixin 混合器名称(变量1: 值，变量2: 值， ...)
+    + 在调用的时候，如果不指定，那么必须按照书写时候的顺序传递参数
+    + 我们可以直接指定给那个参数赋值
+      + @include 混合器名称(某一个变量: 值)
+*/
+
+// 定义一个混合器
+//   定义一个 transition 的混合器
+
+// div {
+//   -webkit-transition: all 1s 0s linear;
+//   -moz-transition: all 1s 0s linear;
+//   -ms-transition: all 1s 0s linear;
+//   -o-transition: all 1s 0s linear;
+//   transition: all 1s 0s linear;
+// }
+
+// @mixin trans() {
+//   -webkit-transition: all 1s 0s linear;
+//   -moz-transition: all 1s 0s linear;
+//   -ms-transition: all 1s 0s linear;
+//   -o-transition: all 1s 0s linear;
+//   transition: all 1s 0s linear;
+// }
+
+// 使用这个 trans 混合器
+// div {
+//   @include trans;
+// }
+
+// h1 {
+//   @include trans;
+// }
+
+// 定义一个有参数的混合器
+// @mixin trans($p, $d, $de, $tf) {
+//   -webkit-transition: $p $d $de $tf;
+//   -moz-transition: $p $d $de $tf;
+//   -ms-transition: $p $d $de $tf;
+//   -o-transition: $p $d $de $tf;
+//   transition: $p $d $de $tf;
+// }
+
+// // 使用的时候
+// div {
+//   @include trans(opacity, .3s, 0s, linear);
+// }
+
+// h1 {
+//   @include trans(all, 1s, 3s, ease-in)
+// }
+
+
+// 定义一个有默认值的混合器
+@mixin trans($p: all, $d: 1s, $de: 0s, $tf: linear) {
+  -webkit-transition: $p $d $de $tf;
+  -moz-transition: $p $d $de $tf;
+  -ms-transition: $p $d $de $tf;
+  -o-transition: $p $d $de $tf;
+  transition: $p $d $de $tf;
+}
+
+// 使用
+div {
+  @include trans;
+}
+
+h1 {
+  @include trans(height);
+}
+
+h2 {
+  @include trans(width, 2s);
+}
+
+h3 {
+  @include trans(all, 1s, 1s);
+}
+
+h4 {
+  @include trans($tf: ease-in);
+}

@@ -1,0 +1,27 @@
+/*
+  sass 导入
+    + 就是把别的文件拿到我自己这里执行
+    + 语法： @import 要导入的文件
+
+  一般定义被导入文件
+    + 一个文件专门定义变量
+    + 一个文件专门定义混合器
+*/
+
+// 导入一个专门定义变量的文件
+@import './02_variable.scss';
+
+// 导入一个专门定义混合器的文件
+@import './03_mixin.scss';
+
+div {
+  color: $color_global;
+}
+
+h1 {
+  background-color: $color_fff;
+}
+
+h2 {
+  @include trans;
+}

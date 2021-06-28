@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <!--
+    gulp 的使用
+      + 每一个项目都是一个独立打包的项目
+      + 一个项目一个 gulpfile.js 文件
+      + 我需要使用 gulp 的一些功能
+        + 需要一个 第三方模块
+        + 这个第三方模块叫做 gulp
+        + 下载 gulp 项目依赖
+      + 直接再 gulpfile.js 文件里面导入
+        + 第三方模块再导入的时候
+        + 直接 require(第三方包名)
+
+    gulp 工作流程
+      + gulp 是一个基于任务的工作流程
+      + 我要创建一个 css 的任务
+        + 这个任务就来帮我打包 css 文件
+        + 当我执行这个 css 任务的时候，就会把我的 css 文件给打包了
+
+    gulp 里面的常用方法
+      + gulp.task()
+        + 用来创建任务的方法
+        + 第一个参数： 任务名称
+        + 第二个参数： 是一个函数，函数里面就是这个任务需要做的事情
+      + gulp.src()
+        + 用来找到文件的
+        + src('a/b/c.css') 准确找到一个文件
+        + src('a/b/**') 找到一个文件夹里面的所有文件
+        + src('a/b/*.css') 找到一个文件夹里面的所有 css 文件
+        + src('a/b/**/*.css') 找到一个目录下所有目录里面的 css 文件
+      + gulp.pipe()
+        + 就是用来帮你做事的
+        + 也叫做管道函数
+        + pipe() 的参数就是你要做的事情
+        + 一个 pipe 函数只能做一个事情
+      + gulp.dest()
+        + 放置文件的
+        + 他也是一个事情
+        + 使用的时候要再 pipe 里面使用
+          + gulp.pipe(gulp.dest())
+        + 参数就是你要放置这个文件的 目录地址
+      + gulp.series()
+        + 用来逐个执行任务的
+        + 它里面的每一个参数就是一个任务名称
+        + 它里面的多个任务会再前一个任务完成之后执行后一个任务
+      + gulp.parallel()
+        + 用来并行执行任务
+        + 他里面的每一个参数就是一个任务名称
+        + 他里面的多个任务会在同时开始执行
+      + gulp.watch()
+        + 用来监控文件的
+        + 第一个参数： 文件路径
+        + 第二个参数： 当文件改变的时候要执行的任务
+  -->
+
+  <!--
+    下载依赖
+      + 分成两种
+        + 一种叫做项目依赖
+        + 一种叫做开发依赖
+      + 我们下载的时候就分成两种形式下载
+        + 开发依赖直接下载
+        + 项目依赖 --save-dev
+        + 在 package.json 里面再不同的位置记录
+      + 两种下载方式，只是再 package.json 里面的记录位置不一样
+        + 为了更直观的看到什么依赖是干什么用的
+        + 别的没有区别
+   -->
+</body>
+</html>

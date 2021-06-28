@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*
+  sass 继承
+    + 直接把另一个规则集继承到自己身上
+    + 使用关键字 @extend 要继承的规则集
+*/
+.abc, p, div {
+  width: 100px;
+  height: 100px;
+  font-size: 10px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  margin: 10px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=01.css.map */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <script>
+    /*
+      node 是没有 html 文件
+        + 模块化就是在一个 js 文件里面引入另一个 js 文件
+        + 当 node 运行的时候，每一个 js 文件都是一个 独立的模块作用域
+          + a.js 里面的东西在 b.js 里面用不了
+        + 就会有一个 导出 一个叫做 导入的语法
+          + a.js 里面导出的内容，在别的文件里面就可以使用
+
+      导入的语法
+        + require(文件路径)
+          + 当你导入一个 js 文件的时候，可以不写后缀
+      导出的语法
+        + module.exports
+          + 他是一个对象
+          + 这个对象会被 js 文件默认导出
+          + 你向这个对象里面添加成员的时候，就是你要导出的内容
+        + 在导入的时候，接受一个变量
+          + 这个变量接受的就是你导入的那个文件导出的 module.exports
+    */
+
+  </script>
+</body>
+</html>

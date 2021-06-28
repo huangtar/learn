@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*
+  什么是变量
+    + 就是在 sass 里面定义一些变量
+    + 当你要使用的时候，直接使用变量就可以了
+    + 定义变量使用 $ 关键字
+      + $变量名称: 值
+    + 当你想使用变量的时候
+      + 就直接使用 $变量名称
+    + 变量是不进行编译的
+      + 只在源代码里面生存
+*/
+div {
+  background-color: green;
+}
+
+h1 {
+  font-size: 14px;
+  color: green;
+}
+
+p {
+  color: green;
+}
+
+span {
+  border: 10px solid green;
+}
+
+/*# sourceMappingURL=01.css.map */

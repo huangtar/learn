@@ -1,0 +1,12 @@
+div {
+  width: 100px;
+  height: 100px;
+
+  p {
+    background-color: red;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}

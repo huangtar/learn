@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    gulp 任务的书写
+
+      1. 使用 gulp.task() 定义一个任务
+        + 再函数内部进行打包 css 的工作
+        + 找到你要打包的文件
+        + 使用 pipe() 来做事情
+      2. 再命令行使用指令来让这个任务执行
+        + 再命令行使用指令
+        + gulp 任务名称
+
+
+    第三方模块
+      + gulp-cssmin
+        + 专门用来把 css 文件进行压缩处理
+        + 导入以后，你得到的内容就是一个函数
+        + 直接让这个函数执行就能压缩 css 文件
+      + gulp-autoprefixer
+        + 自动给 css 样式添加前缀
+        + 导入以后，你得到的内容就是一个函数
+        + 直接让这个函数执行，就能给 css 样式添加前缀
+          + 使用的时候需要一些参数
+      + gulp-sass
+        + 专门把 sass 文件编译成 css 文件使用的
+        + 导入以后，你得到的内容就是一个函数
+        + 直接调用就能进行编译
+        + 你直接安装 gulp-sass 的时候有可能失败
+          + 你先安装一个 node-sass
+          + 再安装一个 gulp-sass 就能成功了
+      + gulp-uglify
+        + 专门把 js 文件进行压缩处理
+        + 导入以后，你得到的内容就是一个函数
+        + 直接调用就行
+        + 这个第三方模块不认识 es2015
+        + 我们需要单独准备几个 第三方模块来解决问题
+      + gulp-babel
+        + 专门用来把 es6 转换成 es5 语法使用的
+        + 他的使用还需要依赖一些别的模块
+        + 需要我们手动下载
+          + @babel/core
+          + @babel/preset-env
+        + 下载的时候需要下载三个包，使用的时候只导入 gulp-babel 就可以了
+        + 这个 gulp-babel 再使用的时候需要传递参数
+          + presets: ['@babel/env']
+      + gulp-htmlmin
+        + 专门用来压缩 html 文件使用的
+        + 导入以后，你得到的内容就是一个函数
+        + 直接调用函数，传递一些参数就可以了
+      + gulp-file-include
+        + 专门用来导入一个 html 片段使用的
+        + 再 html 压缩之前导入
+        + 再使用的时候需要传递一些参数
+          + prefix: '', 你定义的标识符
+            + 当这个 html 被读取的时候，如果看到你的标识符，就会交给 fileinclude 解析
+            + 如果没有看到这个标识符，那么就不会交给 fileinclude 解析
+            + 这个标识符你写成什么都行
+          + basepath: '', 你存放 html 片段的路径
+            + 你要给他一个文件夹目录
+            + 当他解析片段的时候就会自动取这个目录里面查找对应的文件
+            + 如果有，就给你导入进来
+            + 如果没有就报错了
+        + 再你需要导入 html 片段的文件里面进行导入
+          + 你定义的标识符include(你要导入的html片段名称)
+        + 定义完毕 html 片段以后
+          + 当页面不是很一样的时候，需要有一些微调
+          + 可以直接再 html 片段文件里面书写变量
+            + 你定义的标识符+变量名
+          + 再导入这个 html 片段的时候传递
+          + 你的标识符include(html片段文件名， json格式的数据)
+            + 这个 json 格式的数据就是再传递参数
+      + gulp-imagemin
+        + 专门用来压缩 图片的
+        + 压缩力度不会很大
+        + 这个包下载很费劲（包很大）
+        + 使用的时候需要传递一些参数
+      + del
+        + 专门用来删除文件夹的
+        + 使用方式 del(要删除的文件夹)
+      + gulp-webserver
+        + 专门帮我们自动打开一个浏览器
+        + 打开的文件时那个文件？
+          + 打开的时压缩好的文件
+        + 使用的时候需要一些参数
+
+  -->
+</body>
+</html>

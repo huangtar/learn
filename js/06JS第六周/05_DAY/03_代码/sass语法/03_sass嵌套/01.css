@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*
+  sass 的基本嵌套
+    + 可以直接在一个规则集里面写另一个规则集
+    + 会形成一个父子关系
+    + 会根据你的语法来决定他们的具体关系
+
+  1. 在一个规则集里面直接写另一个规则集
+    + 表示后代选择器
+    + 理论上可以无限嵌套
+  2. 在一个规则集里面写另一个规则集的时候加上 >
+    + 表示子代选择器
+  3. 在一个规则集里面使用 & 表示自己规则集
+    + 可以用来链接伪类或者为元素
+  4. 群组嵌套
+*/
+div {
+  width: 100px;
+  height: 100px;
+}
+div:hover {
+  background-color: skyblue;
+}
+
+ul li {
+  margin-right: 20px;
+  float: left;
+}
+ul li:last-child {
+  margin-right: 0;
+}
+
+.clearFix::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*# sourceMappingURL=01.css.map */

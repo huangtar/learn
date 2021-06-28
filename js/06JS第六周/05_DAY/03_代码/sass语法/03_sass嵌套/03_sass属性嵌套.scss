@@ -1,0 +1,70 @@
+/*
+  sass 的基本嵌套
+    + 可以直接在一个规则集里面写另一个规则集
+    + 会形成一个父子关系
+    + 会根据你的语法来决定他们的具体关系
+
+  1. 在一个规则集里面直接写另一个规则集
+    + 表示后代选择器
+    + 理论上可以无限嵌套
+  2. 在一个规则集里面写另一个规则集的时候加上 >
+    + 表示子代选择器
+  3. 在一个规则集里面使用 & 表示自己规则集
+    + 可以用来链接伪类或者为元素
+  4. 群组嵌套
+    + 一个选择器，嵌套多个选择器
+    + 多个选择器，嵌套一个选择器
+    + 多个选择器，嵌套多个选择器（相对比较少用）
+    + 在群组嵌套里面也可以使用 > & 之类的符号
+  5. 属性嵌套
+    + 和规则集没有关系
+    + 只是在写属性的时候可以嵌套一些内容
+      + 只能嵌套哪些有 - 的属性
+    + 可以写成几种方式（以 border 为例）
+      1. 直接在属性后面写 {}
+        + {} 里面是每一个的值
+      2. 在写完值以后，在写一个 {}
+        + {} 里面只写一些特殊的内容
+      3. 当你的 {} 里面的内容有嵌套规则的时候
+        + 可以继续写 {} 嵌套
+*/
+
+// 在页面出现一个三角
+div {
+  width: 0;
+  height: 0;
+
+  // border: {
+  //   left: 10px solid transparent;
+  //   top: 10px solid red;
+  //   right: 10px solid transparent;
+  //   bottom: 10px solid transparent;
+  // };
+
+  // border: 10px solid red {
+  //   left: 10px solid transparent;
+  //   right: 10px solid transparent;
+  //   bottom: 10px solid transparent;
+  // };
+
+  // border: 10px solid transparent {
+  //   top: 10px solid red;
+  // };
+
+  border: 10px solid {
+    left: {
+      color: red;
+    };
+    top: {
+      color: green;
+      style: dashed;
+    };
+    right: {
+      color: skyblue;
+      width: 20px;
+    };
+    bottom: {
+      color: yellow;
+    };
+  };
+}

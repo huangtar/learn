@@ -1,0 +1,9 @@
+/* 这个文件专门用来定义混合器 */
+
+@mixin trans($p: all, $d: .3s, $de: 0s, $tf: linear) {
+  -webkit-transition: $p $d $de $tf;
+  -moz-transition: $p $d $de $tf;
+  -ms-transition: $p $d $de $tf;
+  -o-transition: $p $d $de $tf;
+  transition: $p $d $de $tf;
+}

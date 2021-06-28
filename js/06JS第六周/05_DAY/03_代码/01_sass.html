@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./sass编译/01_单文件编译/01.css">
+</head>
+<body>
+
+  <h1>hello world</h1>
+
+
+  <script>
+    /*
+      sass
+        + 是一个 css 的预编译工具
+        + 使用来写 css 的
+        + 也是一个写 css 的文件
+          + 有两种后缀格式
+          + .sass
+          + .scss
+        + 写的是 css 代码
+          + 但是浏览器不认识
+        + 要把我们写的 scss 或者 sass 后缀的文件，转换成 css 文件的格式
+          + 然后就可以在浏览器里面运行了
+        + 转换的时候就需要一个工具来帮我转换
+
+      sass 工具
+        + 以前依赖 ruby 环境
+        + 后来依赖 python 环境
+        + 现在我们可以让他依赖 node 环境
+        + 需要安装一个 sass 这个工具
+          + 直接使用 npm 安装就可以了
+          + 使用 npm 安装一个全局的 sass 工具
+          + npm i -g sass
+
+      sass 安装检测
+        + 在命令行输入指令检测一下
+        + sass --version
+
+      sass 使用
+        + 就是把 sass 或者 scss 后缀的文件转换成 css 后缀的文件
+        + 有几种编译模式
+          1. 直接把 scss 或者 sass 后缀的文件直接转换成 css 后缀的文件
+            + 在命令行使用指令进行转换
+            + 打开命令行，切换目录到你要转换的文件目录下
+            + **sass 你要转换的文件 你要转成什么文件**
+            + 当你每次修改源文件以后，都要重新执行编译
+          2. 实时编译
+            + 随着你的书写，你的源文件一修改，生成的 css 文件跟着变
+            + 使用指令的方式进行编译
+            + **sass --watch 你要编译的文件:你要生成的文件**
+            + 只能同时监控一个文件
+          3. 实时编译文件夹
+            + 就是把整个文件夹都监控起来
+            + 只要整个文件夹里面的 scss 或者 sass 后缀的文件发生了改变
+            + 就会实时编译到你指定的另一个文件夹里面
+            + 使用指令进行编译
+              + **sass --watch 你要监控的文件夹:你要生成的文件夹**
+    */
+
+    /*
+      less
+        + 是一个 css 的预编译工具
+        + 回去看一下
+          + 和 sass 的语法基本一致
+          + sass 定义变量使用 $变量名
+          + less 定义变量使用 @变量名
+          + sass 有混合器
+          + less 每一个规则集都可以当作混合器
+          + less 没有继承
+    */
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/*
+  sass 继承
+    + 直接把另一个规则集继承到自己身上
+    + 使用关键字 @extend 要继承的规则集
+*/
+
+// div {
+//   width: 100px;
+//   height: 100px;
+//   background-color: red;
+// }
+
+// // 发现这个 p 标签也是和 div 那个一样
+// p {
+//   // 先把 div 的继承下来
+//   // 在写我自己的
+
+//   @extend div;
+//   margin: 10px;
+//   padding: 10px;
+// }
+
+// div {
+//   width: 100px;
+//   height: 100px;
+//   font-size: 10px;
+//   background-color: red;
+//   margin: 10px;
+//   padding: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// p {
+//   // 我向继承 div 的内容
+//   // 但是我不要 margin 个 padding
+
+//   @extend div;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// 单独写一个继承的类名
+.abc {
+  width: 100px;
+  height: 100px;
+  font-size: 10px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  @extend .abc;
+  margin: 10px;
+  padding: 10px;
+}
+
+p {
+  @extend .abc;
+}
